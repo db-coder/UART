@@ -1,0 +1,559 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.60 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.60 secs
+ 
+--> Reading design: TOP.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "TOP.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "TOP"
+Output Format                      : NGC
+Target Device                      : xc6slx45-3-csg324
+
+---- Source Options
+Top Module Name                    : TOP
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\Anmol\Desktop\UART_v2\UART\tx_uart.vhd" into library work
+Parsing entity <TX_UART>.
+Parsing architecture <Behavorial> of entity <tx_uart>.
+Parsing VHDL file "C:\Users\Anmol\Desktop\UART_v2\UART\rx_uart.vhd" into library work
+Parsing entity <rx_uart>.
+Parsing architecture <Behavioral> of entity <rx_uart>.
+Parsing VHDL file "C:\Users\Anmol\Desktop\UART_v2\UART\clock_gen.vhd" into library work
+Parsing entity <CLOCK_GEN>.
+Parsing architecture <Behavioral> of entity <clock_gen>.
+Parsing VHDL file "C:\Users\Anmol\Desktop\UART_v2\UART\TOP.vhd" into library work
+Parsing entity <TOP>.
+Parsing architecture <Behavioral> of entity <top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <TOP> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <CLOCK_GEN> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <TX_UART> (architecture <Behavorial>) from library <work>.
+WARNING:HDLCompiler:92 - "C:\Users\Anmol\Desktop\UART_v2\UART\tx_uart.vhd" Line 73: out_signal should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Anmol\Desktop\UART_v2\UART\tx_uart.vhd" Line 74: flag should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Anmol\Desktop\UART_v2\UART\tx_uart.vhd" Line 75: temp_start should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Anmol\Desktop\UART_v2\UART\tx_uart.vhd" Line 90: flag should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Anmol\Desktop\UART_v2\UART\tx_uart.vhd" Line 94: temp_start should be on the sensitivity list of the process
+
+Elaborating entity <rx_uart> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:92 - "C:\Users\Anmol\Desktop\UART_v2\UART\rx_uart.vhd" Line 86: rx_bit_count should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Anmol\Desktop\UART_v2\UART\rx_uart.vhd" Line 87: tmp_tx should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Anmol\Desktop\UART_v2\UART\rx_uart.vhd" Line 88: temp_rx_valid should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Anmol\Desktop\UART_v2\UART\rx_uart.vhd" Line 89: temp_rx_data should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Anmol\Desktop\UART_v2\UART\rx_uart.vhd" Line 90: reset_flag should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Anmol\Desktop\UART_v2\UART\rx_uart.vhd" Line 98: sample should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Anmol\Desktop\UART_v2\UART\rx_uart.vhd" Line 106: rx_bit_count should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Anmol\Desktop\UART_v2\UART\rx_uart.vhd" Line 107: sample should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Anmol\Desktop\UART_v2\UART\rx_uart.vhd" Line 108: tmp_tx should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Anmol\Desktop\UART_v2\UART\rx_uart.vhd" Line 111: rx_bit_count should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Anmol\Desktop\UART_v2\UART\rx_uart.vhd" Line 114: tmp_tx should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Anmol\Desktop\UART_v2\UART\rx_uart.vhd" Line 116: tmp_tx should be on the sensitivity list of the process
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <TOP>.
+    Related source file is "C:\Users\Anmol\Desktop\UART_v2\UART\TOP.vhd".
+    Summary:
+	no macro.
+Unit <TOP> synthesized.
+
+Synthesizing Unit <CLOCK_GEN>.
+    Related source file is "C:\Users\Anmol\Desktop\UART_v2\UART\clock_gen.vhd".
+    Found 1-bit register for signal <temp>.
+    Found 1-bit register for signal <ns>.
+    Found 1-bit register for signal <ps>.
+    Found 13-bit register for signal <counter>.
+    Found 13-bit adder for signal <counter[12]_GND_6_o_add_1_OUT> created at line 47.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  16 D-type flip-flop(s).
+Unit <CLOCK_GEN> synthesized.
+
+Synthesizing Unit <TX_UART>.
+    Related source file is "C:\Users\Anmol\Desktop\UART_v2\UART\tx_uart.vhd".
+    Found 1-bit register for signal <out_signal>.
+    Found 1-bit register for signal <flag>.
+    Found 1-bit register for signal <temp_start>.
+    Found 1-bit register for signal <temp_stop>.
+    Found 3-bit register for signal <index>.
+    Found 2-bit register for signal <TX_PS>.
+    Found finite state machine <FSM_0> for signal <TX_PS>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 8                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 4                                              |
+    | Clock              | sys_clk (rising_edge)                          |
+    | Power Up State     | idle                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 3-bit subtractor for signal <GND_9_o_GND_9_o_sub_13_OUT<2:0>> created at line 138.
+    Found 1-bit 8-to-1 multiplexer for signal <index[2]_DATA[7]_Mux_3_o> created at line 112.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   7 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <TX_UART> synthesized.
+
+Synthesizing Unit <rx_uart>.
+    Related source file is "C:\Users\Anmol\Desktop\UART_v2\UART\rx_uart.vhd".
+    Found 4-bit register for signal <rx_bit_count>.
+    Found 8-bit register for signal <tmp_tx>.
+    Found 1-bit register for signal <temp_rx_valid>.
+    Found 8-bit register for signal <temp_rx_data>.
+    Found 1-bit register for signal <reset_flag>.
+    Found 4-bit register for signal <sampling_count>.
+    Found 9-bit register for signal <count>.
+    Found 4-bit register for signal <sample>.
+    Found 1-bit register for signal <RPS>.
+    Found 9-bit adder for signal <count[8]_GND_10_o_add_3_OUT> created at line 64.
+    Found 4-bit adder for signal <sampling_count[3]_GND_10_o_add_6_OUT> created at line 71.
+    Found 4-bit adder for signal <sample[3]_GND_10_o_add_7_OUT> created at line 73.
+    Found 4-bit adder for signal <rx_bit_count[3]_GND_10_o_add_23_OUT> created at line 106.
+    Found 4-bit comparator greater for signal <sample[3]_PWR_10_o_LessThan_25_o> created at line 107
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred  40 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   3 Multiplexer(s).
+Unit <rx_uart> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 6
+ 13-bit adder                                          : 1
+ 3-bit subtractor                                      : 1
+ 4-bit adder                                           : 3
+ 9-bit adder                                           : 1
+# Registers                                            : 18
+ 1-bit register                                        : 10
+ 13-bit register                                       : 1
+ 3-bit register                                        : 1
+ 4-bit register                                        : 3
+ 8-bit register                                        : 2
+ 9-bit register                                        : 1
+# Comparators                                          : 1
+ 4-bit comparator greater                              : 1
+# Multiplexers                                         : 5
+ 1-bit 2-to-1 multiplexer                              : 1
+ 1-bit 8-to-1 multiplexer                              : 1
+ 4-bit 2-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 1
+ 9-bit 2-to-1 multiplexer                              : 1
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <CLOCK_GEN>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <CLOCK_GEN> synthesized (advanced).
+
+Synthesizing (advanced) Unit <TX_UART>.
+The following registers are absorbed into counter <index>: 1 register on signal <index>.
+Unit <TX_UART> synthesized (advanced).
+
+Synthesizing (advanced) Unit <rx_uart>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+The following registers are absorbed into counter <rx_bit_count>: 1 register on signal <rx_bit_count>.
+The following registers are absorbed into counter <sampling_count>: 1 register on signal <sampling_count>.
+The following registers are absorbed into counter <sample>: 1 register on signal <sample>.
+Unit <rx_uart> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 6
+ 13-bit up counter                                     : 1
+ 3-bit down counter                                    : 1
+ 4-bit up counter                                      : 3
+ 9-bit up counter                                      : 1
+# Registers                                            : 26
+ Flip-Flops                                            : 26
+# Comparators                                          : 1
+ 4-bit comparator greater                              : 1
+# Multiplexers                                         : 3
+ 1-bit 2-to-1 multiplexer                              : 1
+ 1-bit 8-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 1
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <Transmitter/FSM_0> on signal <TX_PS[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ idle  | 00
+ busy  | 01
+ start | 10
+ stop  | 11
+-------------------
+WARNING:Xst:3002 - This design contains one or more registers/latches that are directly
+   incompatible with the Spartan6 architecture. The two primary causes of this is
+   either a register or latch described with both an asynchronous set and
+   asynchronous reset, or a register or latch described with an asynchronous
+   set or reset which however has an initialization value of the opposite 
+   polarity (i.e. asynchronous reset with an initialization value of 1).
+    While this circuit can be built, it creates a sub-optimal implementation
+   in terms of area, power and performance. For a more optimal implementation
+   Xilinx highly recommends one of the following:
+
+          1) Remove either the set or reset from all registers and latches
+             if not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Ensure all registers have the same initialization value as the
+             described asynchronous set or reset polarity
+          4) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Spartan6 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set or reset and opposite initialization value:
+    clock1/ns in unit <TOP>
+
+
+Optimizing unit <TOP> ...
+
+Optimizing unit <TX_UART> ...
+
+Optimizing unit <rx_uart> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block TOP, actual ratio is 0.
+WARNING:Xst:1426 - The value init of the FF/Latch clock1/ns_LD hinder the constant cleaning in the block TOP.
+   You should achieve better results by setting this init to 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 66
+ Flip-Flops                                            : 66
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : TOP.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 139
+#      GND                         : 1
+#      INV                         : 3
+#      LUT1                        : 17
+#      LUT2                        : 5
+#      LUT3                        : 16
+#      LUT4                        : 20
+#      LUT5                        : 9
+#      LUT6                        : 24
+#      MUXCY                       : 20
+#      MUXF7                       : 1
+#      VCC                         : 1
+#      XORCY                       : 22
+# FlipFlops/Latches                : 67
+#      FD                          : 27
+#      FDC                         : 2
+#      FDE                         : 16
+#      FDR                         : 13
+#      FDRE                        : 5
+#      FDSE                        : 3
+#      LD                          : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 21
+#      IBUF                        : 11
+#      OBUF                        : 10
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx45csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              67  out of  54576     0%  
+ Number of Slice LUTs:                   94  out of  27288     0%  
+    Number used as Logic:                94  out of  27288     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    103
+   Number with an unused Flip Flop:      36  out of    103    34%  
+   Number with an unused LUT:             9  out of    103     8%  
+   Number of fully used LUT-FF pairs:    58  out of    103    56%  
+   Number of unique control sets:         8
+
+IO Utilization: 
+ Number of IOs:                          22
+ Number of bonded IOBs:                  22  out of    218    10%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+SYS_CLK                            | BUFGP                  | 66    |
+clock1/ps                          | NONE(clock1/ns_LD)     | 1     |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 3.932ns (Maximum Frequency: 254.330MHz)
+   Minimum input arrival time before clock: 4.738ns
+   Maximum output required time after clock: 3.634ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'SYS_CLK'
+  Clock period: 3.932ns (frequency: 254.330MHz)
+  Total number of paths / destination ports: 1128 / 99
+-------------------------------------------------------------------------
+Delay:               3.932ns (Levels of Logic = 2)
+  Source:            Receiver/reset_flag (FF)
+  Destination:       Receiver/tmp_tx_7 (FF)
+  Source Clock:      SYS_CLK rising
+  Destination Clock: SYS_CLK rising
+
+  Data Path: Receiver/reset_flag to Receiver/tmp_tx_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.447   0.995  Receiver/reset_flag (Receiver/reset_flag)
+     LUT5:I0->O           14   0.203   0.958  Receiver/_n0141_inv11 (Receiver/_n0141_inv1)
+     LUT4:I3->O            8   0.205   0.802  Receiver/_n0129_inv1 (Receiver/_n0129_inv)
+     FDE:CE                    0.322          Receiver/tmp_tx_0
+    ----------------------------------------
+    Total                      3.932ns (1.177ns logic, 2.755ns route)
+                                       (29.9% logic, 70.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SYS_CLK'
+  Total number of paths / destination ports: 35 / 20
+-------------------------------------------------------------------------
+Offset:              4.738ns (Levels of Logic = 4)
+  Source:            rst (PAD)
+  Destination:       Receiver/sample_3 (FF)
+  Destination Clock: SYS_CLK rising
+
+  Data Path: rst to Receiver/sample_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            19   1.222   1.436  rst_IBUF (rst_IBUF)
+     LUT6:I0->O            1   0.203   0.684  Receiver/count[8]_PWR_10_o_equal_5_o_inv_SW4 (N13)
+     LUT6:I4->O            4   0.203   0.684  Receiver/_n01071 (Receiver/_n0107)
+     LUT4:I3->O            1   0.205   0.000  Receiver/sample_3_rstpot (Receiver/sample_3_rstpot)
+     FD:D                      0.102          Receiver/sample_3
+    ----------------------------------------
+    Total                      4.738ns (1.935ns logic, 2.803ns route)
+                                       (40.8% logic, 59.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'SYS_CLK'
+  Total number of paths / destination ports: 10 / 10
+-------------------------------------------------------------------------
+Offset:              3.634ns (Levels of Logic = 1)
+  Source:            Receiver/temp_rx_data_7 (FF)
+  Destination:       RX_DATA<7> (PAD)
+  Source Clock:      SYS_CLK rising
+
+  Data Path: Receiver/temp_rx_data_7 to RX_DATA<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.447   0.616  Receiver/temp_rx_data_7 (Receiver/temp_rx_data_7)
+     OBUF:I->O                 2.571          RX_DATA_7_OBUF (RX_DATA<7>)
+    ----------------------------------------
+    Total                      3.634ns (3.018ns logic, 0.616ns route)
+                                       (83.0% logic, 17.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock SYS_CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+SYS_CLK        |    3.932|         |         |         |
+clock1/ps      |         |    1.784|         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 23.00 secs
+Total CPU time to Xst completion: 22.93 secs
+ 
+--> 
+
+Total memory usage is 239852 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   19 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

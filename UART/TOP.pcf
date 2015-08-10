@@ -1,0 +1,11 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Thu Apr 30 16:38:57 2015
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "SYS_CLK" LOCATE = SITE "L15" LEVEL 1;
+COMP "RX" LOCATE = SITE "A16" LEVEL 1;
+COMP "TX" LOCATE = SITE "B16" LEVEL 1;
+COMP "rst" LOCATE = SITE "N4" LEVEL 1;
+SCHEMATIC END;
+

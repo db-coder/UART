@@ -1,0 +1,4 @@
+net sys_clk loc="L15";
+net rst loc="N4";
+net rx loc="a16";
+net tx loc="b16";
